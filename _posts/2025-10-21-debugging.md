@@ -1,4 +1,4 @@
-<!doctype html>
+<!doctype blog html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -74,5 +74,42 @@
       Python is a high-level, interpreted programming language known for clear, readable syntax and a large standard library that speeds development. It supports multiple programming paradigms — procedural, object-oriented, and functional — making it suitable for beginners and experienced developers alike. Common uses include web development, data analysis, scripting, automation, and scientific computing. Python's package ecosystem (installed via pip) provides libraries for almost any task, and its interactive REPL and simple file-based scripts make it easy to experiment and iterate quickly.
     </p>
   </article>
+
+
+
+
+
+<article class="card" role="article" aria-labelledby="debug-title" style="margin-top:32px;">
+  <div class="kicker">Programming</div>
+  <h1 id="debug-title">Debugging in Python</h1>
+  <p>
+    Debugging in Python is the process of identifying and fixing errors so your program runs 
+    correctly. It often involves examining error messages, adding temporary print statements 
+    to trace values, or using tools like Python's built-in <code>pdb</code> debugger to step 
+    through code line by line. Debugging helps you understand why something isn’t working as 
+    expected, isolate the issue, and apply a clear fix.
+  </p>
+</article>
+
+
+
+
+
+
+<article class="card" role="article" aria-labelledby="broken-code-title" style="margin-top:32px;">
+  <div class="kicker">Example</div>
+  <h1 id="broken-code-title">Broken Code Example</h1>
+  
+  <!-- Image from your images folder -->
+  <img src="../images/code.png" alt="A screenshot of code for debugging">
+  
+  <!-- Explanation text -->
+  <p>
+    place holder text lol
+  </p>
+</article>
+
+
+
 </body>
 </html>
