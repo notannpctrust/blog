@@ -100,12 +100,29 @@
   <div class="kicker">Example</div>
   <h1 id="broken-code-title">Broken Code Example</h1>
   
-  <!-- Image from your images folder -->
-  <img src="../images/code.png" alt="A screenshot of code for debugging">
   
-  <!-- Explanation text -->
+
+
+
+ ```
+temperature = 75
+
+if temperature > 80:
+    print("It's hot")
+
+elif temperature > 50:
+    print("It's temperate")
+    
+elif temperature < 0:
+    print("It's cold")
+```
+
+
+
+  
+  
   <p>
-    place holder text lol
+    text lol
   </p>
 </article>
 
