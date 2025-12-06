@@ -1,4 +1,4 @@
-<!doctype blog html>
+
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -97,7 +97,7 @@
 
 
 <article class="card" role="article" aria-labelledby="broken-code-title" style="margin-top:32px;">
-  <div class="kicker">Example</div>
+  <div class="kicker">#1</div>
   <h1 id="broken-code-title">Broken Code Example</h1>
   
   
@@ -122,9 +122,146 @@ elif temperature < 0:
   
   
   <p>
-    text lol
+    So here with python,you would wanna start by reading line by line.The first line starts off with the variable called "temperature",given the value of 75.The second line states a conditional statement whereas when a number higher than 80 is inputted,a print statement will run saying that it's hot.The next line is an elif statement,.In Python, "elif" is a keyword that stands for "else if." It is used in conditional statements to check for multiple conditions sequentially after an initial if statement has evaluated to False.That elif statement explains how if the number inputted is higher than 50,then a print statement will run saying how "it's temperate".The last line has yet another elif statement.This time it checks for a number less than 0.The entire python code snippet simply exists for the purpose of checking the temperature.The error here is that nothing is being accounted for anything greater then 0 but less than 50.To fix this issue Change the final elif to an else statement, this will make sure any temperature less than 50 is determined to be cold
   </p>
 </article>
+
+<article class="card" role="article" aria-labelledby="broken-code-title" style="margin-top:32px;">
+  <div class="kicker">#2</div>
+  <h1 id="broken-code-title">Broken Code Example</h1>
+  
+  
+
+
+
+ ```
+text = "Hello, world, my name is"
+count = 0
+
+for char in text:
+    if char == "":
+       count += 1
+
+print(count)
+```
+
+
+
+  
+  
+  <p>
+    The purpose of this code snippet is to count how many spaces there are in the sentence "Hello world,my name is"
+    Right now the count is zero.The code states that for every character within text, if there is "" then count will increase by 1.However when printing the count,there is an error.This is due to the iff statement.The quotation marks have nothing within them.Therefore we need to get them to accept spaces.Simply fixing "" to " " would suffice since there is a space found between the quotation marks.
+  </p>
+</article>
+
+<article class="card" role="article" aria-labelledby="broken-code-title" style="margin-top:32px;">
+  <div class="kicker">#3</div>
+  <h1 id="broken-code-title">Broken Code Example</h1>
+  
+  
+
+
+
+ ```
+print("give me a number")
+n = input()
+
+for num in range(1, n):
+    if num % 2 < 0:
+        print(num, "is even.")
+    else:
+        print(num, "is odd.")
+```
+
+
+
+  
+  
+  <p>
+    This next snippet actually stumped me for like 10 minutes if I'm being honest.Going step by step we start out with the code asking the user for a number.The user then inputs a number.Then getting to the loop,If the numbers within the loop are dived by 2 and their remainder is greater than 0 they are odd,if they have no remainder,then that number will be even.The main issue here is that second line.The input is just excepting strings as inputs,they need to be changed so it accepts numbers as well.Changing "n = input()" to n = int((input)),we allow the input to accept whole numbers.
+  </p>
+</article>
+
+<article class="card" role="article" aria-labelledby="broken-code-title" style="margin-top:32px;">
+  <div class="kicker">#4</div>
+  <h1 id="broken-code-title">Broken Code Example</h1>
+  
+  
+
+
+
+ ```
+num = int(input("Enter an integer: "))
+
+if num < -1:
+  print("No negative numbers.")
+else:
+  result = 1
+  for i in range(1, num):
+    result *= i   
+
+  print("Factorial of " + num + "is" + result)
+```
+
+
+
+  
+  
+  <p>
+    The main issue here is that the for loop cant loop as intended,the for loop is supposed to to loop the number of times between 1 and whatever value num is given.However,num is being excluded.To fix that the for loop must be fixed to for i in range(1,num + 1).That isn't the only issue however.The Problem: You cannot use the addition operator (+) to directly join strings (like "Factorial of ") and integers (num and result).The Fix: You must convert the integers to strings using str() or use an f-string (the recommended modern method) to embed the variables inside the string.
+  </p>
+</article>
+
+<article class="card" role="article" aria-labelledby="broken-code-title" style="margin-top:32px;">
+  <div class="kicker">#5</div>
+  <h1 id="broken-code-title">Broken Code Example</h1>
+  
+  
+
+
+
+ ```
+attempts = 0
+correct_password = "secret"
+
+while True:
+    password = input("Enter your password: ")
+    attempts += 1
+
+    if password == "incorrect_password":
+        print("Correct password!")
+    else:
+        print("Incorrect password")
+
+    if attempts > 3:
+        print("Too many attempts")
+        break
+```
+
+
+
+  
+  
+  <p>
+     The code checks if the user's input equals the text "incorrect_password", not the correct stored secret ("secret"). This means the password can never be accepted.
+The Fix: Change the comparison to if password == correct_password:.
+
+Missing Exit on Success: Even if the password were correctly checked, the loop doesn't stop when the right password is entered. It prints "Correct password!" but immediately asks for the password again.
+The Fix: Add a break command right after printing "Correct password!"
+  </p>
+</article>
+
+
+<article class="card" role="article" aria-labelledby="conclusion-title" style="margin-top:32px;">
+  <div class="kicker">Summary</div>
+  <h1 id="conclusion-title">Conclusion: Core Debugging Patterns</h1>
+  
+  <p>
+    The five code examples illustrate several core Python debugging patterns. The most common errors were **Type Errors** (mixing strings and integers without conversion, as seen in examples #3 and #4) and **Logical Errors** that caused unexpected program behavior (like the incorrect password check in #5, the faulty loop range in #4, and the incorrect modulo check in #3). Semantic HTML elements, like the `<article>` tag used here, help organize these findings, ensuring each debugging analysis is a self-contained, reviewable unit of information. Addressing these fundamental errors in type handling and conditional logic is key to writing clean, reliable Python code.
+  </p>
+</article>
+
 
 
 
